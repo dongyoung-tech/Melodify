@@ -1,0 +1,59 @@
+.keyword-container{
+    width: 1000px;
+    margin: 120px auto;
+}
+
+.keyword-container h2 , .keyword-container form{
+    width: 980px;
+    margin: 20px auto;
+}
+.keyword-container form{
+    overflow: hidden;
+}
+.keyword-container form input{
+    height: 100%;
+    width: calc(100% - 200px);
+    background: none;
+    padding: 10px;
+}
+.keyword-container form select{
+    width: 100px;
+    height: 100%;
+    border: none;
+    text-align: center;
+    background-image: url('../../asset/select2.png');
+    background-position-x: right;
+    background-position-y:center ;
+    padding-right: 10px;
+    color: white;
+}
+.keyword-container form button{
+    background-color: #FFA01E;
+    width: 100px;
+    height: 100%;
+    color: white;
+    float: right;
+    text-align: center;
+}
+.keyword-container form{
+    background-color: white;
+    height: 50px;
+    border-radius: 10px;
+    box-shadow: 0 0 7px 2px #d2d2d2;
+}
+.pagination{
+    margin-top:30px;
+    text-align: center;
+}
+.pagination button{
+    width: 30px;
+    height: 30px;
+    margin: 0 5px;
+    border: 1px solid #d2d2d2;
+}
+.pagination .active{
+    background-color: #FFA01E;
+    color: white;
+    border: none;
+}
+.make-btn{background-color: #FFA01E; color: white; padding: 5px;}

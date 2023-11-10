@@ -1,11 +1,16 @@
 .App {
   text-align: center;
 }
-
+*{box-sizing: border-box; appearance: none;outline: none; font-family: 'Noto Sans KR', sans-serif;list-style: none;text-decoration: none;}
 .App-logo {
   height: 40vmin;
   pointer-events: none;
 }
+a{
+  color:black;
+}
+input,button{border: none;}
+
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
@@ -35,4 +40,294 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+header{
+  position: fixed;
+  border-bottom: 1px solid #d2d2d2;
+  top:0;
+  width: 100%;
+  height: 70px;
+  background-color: white;
+  z-index: 1;
+}
+.header-form{
+  width: 300px;
+  height: 35px;
+  border-radius: 30px;
+  overflow: hidden;
+  border: 2px solid #FFA01E;
+  display: flex;
+  align-items: center;
+}
+.header-form input {
+  width: calc(100% - 30px);
+  padding: 5px 10px;
+}
+.header-form i{
+  width: 30px;
+  color: #FFA01E;
+}
+.logo{
+  width: 200px;
+  height: 55px;
+}
+.header-inner {
+  width: 1050px;
+  display: flex;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  height: 70px;
+}
+header ul {
+  margin: 0;
+  height: 100%;
+  line-height: 70px;
+  padding: 0;
+  margin-left: 30px;
+}
+header ul li{
+  height: 100%;
+  display: inline-block;
+  margin: 0 10px;
+  width: 95px;
+  text-align: center;
+  font-weight: bold;
+}
+header ul li:hover{
+  color: #FFA01E;
+}
+.Main-photo{
+  width: 100%;
+  height: 350px;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)) , url("./asset/music.jpg");
+  background-position-x: center;
+  background-position-y: center;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 20px;
+  flex-wrap: wrap;
+  flex-direction: column;
+  display: none;
+}
+.Main-photo form{
+  width: 500px;
+  margin: 0 auto;
+  border: 3px solid #FFA01E;
+  height: 50px;
+  background-color: white;
+  border-radius: 50px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+}
+
+.Main-photo form input {
+  width: calc(100% - 30px);
+  padding: 5px 10px;
+  height: 100%;
+}
+.Main-photo form i{
+  width: 30px;
+  color: #FFA01E;
+}
+.Main-photo h2{
+  margin: 0 0 20px;
+  color: white
+}
+.M-logo{
+  width: 350px;
+}
+
+.Main{
+  width: 1000px;
+  margin: 80px auto;
+  
+}
+.Top-Tracks{
+  display: flex;
+  flex-wrap: wrap;
+}
+.Album-container{
+  margin: 0 auto;
+  width: 100%;
+}
+.Album-container h2{
+  width: 100%;
+  margin-top: 0;
+}
+.A-image-box{
+  width: 100%;
+  height: 80%;
+  box-shadow: 0 0 5px 2px #d2d2d2;
+  padding: 5px;
+}
+.A-image-box img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.M-Album-Item{
+  width: 240px;
+  height: 200px;
+  margin: 5px;
+  box-shadow: 0 0 7px 2px #d2d2d2;
+  position: relative;
+}
+.M-Album-Item:hover .A-text{
+  display: flex;
+  flex-wrap: wrap;
+  height: 100%;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  flex-direction:column;
+  font-size: 1.5rem;
+}
+.Album-container h2{
+  padding-left: 5px;
+  font-size: 1rem;
+}
+.A-text{
+  font-size: 1rem;
+  padding:7px;
+  background:  linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  color: white;
+}
+.A-text strong {
+  display: inline-block;
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 0.9rem;
+}
+.t-artist{
+  font-size: 0.7rem;
+  color: #808080;
+}
+.Main .Album-container {
+  margin-top: 50px;
+}
+.loading-con{
+  position: fixed;
+  top:0;
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.627), rgba(0, 0, 0, 0.6));
+}
+
+.loading-con img{
+  position: absolute;
+  top:50%;
+  margin-top: -35px;
+  left:50%;
+  margin-left: -35px;
+  width: 70px;
+  -webkit-animation: spin 1s linear infinite;
+  animation: spin 1s linear infinite;
+}
+.loading-con.hide{
+  display: none;
+}
+
+.loading-con.hide img{
+  animation: none;
+}
+@keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}   
+.Top-Artist-Chart {
+  margin-top: 50px;
+  display: flex;
+}
+.Top-Artist-Chart ul{
+  width: 250px;
+  margin: 0;
+  padding: 0px;
+  margin-right:50px;
+  margin-left: 5px;
+  overflow: hidden;
+  height: 443px;
+  background-color: white;
+  box-shadow: 0 0 7px 2px #d2d2d2;
+}
+.Top-Artist-Chart ul h4{
+  margin: 0;
+}
+.Top-Artist-Chart ul li:first-child{
+  padding: 0;
+  height: 50px;
+  margin: 0;
+  padding: 10px;
+  overflow: hidden;
+  background-color: #FFA01E;
+  color: white;
+}
+.Top-Artist-Chart ul li span:first-child{
+  color: #FFA01E;
+  font-weight: bold;
+}
+.Top-Artist-Chart ul li{
+  padding:5px 5px 5px 10px;
+  height: calc((100% - 50px) / 10);
+  border-top: 1px solid #d2d2d2;
+}
+.Top-Artist-Chart ul li span{
+  margin-right: 20px;
+}
+.Top-Artist-Chart ul li:hover ,.Top-Artist-Chart ul li:hover span {
+  background: #FFA01E;
+  color: white;
+}
+.t-a-n{
+  display: inline-block;
+  width: 20px;
+}
+.Top-Video-container{
+  display: inline-block;
+  flex-wrap: wrap;
+  width:calc(100% - 300px);
+}
+.Top-Video-container h4{
+  margin-top: 0;
+  padding-left: 5px;
+}
+.Top-Video-container iframe{
+  width: 50%;
+  height: 200px;
+  padding: 5px;
+}
+
+.banner-image{
+  width: 990px;
+  height: 100px;
+  margin: 40px 5px 0;
+  display: flex;
+  align-items: center;
+  background:linear-gradient(rgba(0,0,0,.3),rgba(0,0,0,.3)), url("./asset/music.jpg");
+  background-position: center;
+  background-size: cover;
+  color: white;
+  text-align: center;
+  justify-content: center;
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+
+.background-overlay{
+  position: fixed;
+  top: 0;
+  left:0;
+  width: 100%;
+  height: 100vh;
+  z-index: -1;
+  background:#EFF1F6;
 }

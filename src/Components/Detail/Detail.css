@@ -1,0 +1,187 @@
+.detail-Info dt{
+    float: left;
+    width: 70px;
+    margin-right: 10px;
+    color:#FFA01E;
+    font-weight: bold;
+    height: 30px;
+}
+.detail-Info dd{
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    margin-top: 0px;
+    margin: 0;
+    display: inline-block;
+    width: calc(100% - 80px);
+    height: 30px;
+}
+.detail-Info p{
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 3;
+    margin: 0;
+}
+.Album-Item{
+    width: calc(90% / 5);
+    height: 170px;
+    position: relative;
+    margin: 1%;
+    box-shadow: 0 0 7px 2px #d2d2d2;
+}
+.Album-container{
+    display: flex;
+    flex-wrap: wrap;
+}
+.Album-text{
+    width: 100%;
+    padding: 5px;
+    position: absolute;
+    bottom: 0;
+    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8));
+    color: white;
+    height: 50px;
+}
+.Album-text strong{
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    display: block;
+    font-size: 0.8rem;
+}
+.A-year{
+    color: #808080;
+    font-size: 0.7rem;
+}
+.Album-Item img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.lyric-con{
+    border-top: 1px solid #d2d2d2;
+    margin-top: 30px;
+}
+.lyric-con h4{
+    font-size: 1.3rem;
+    margin: 10px 0;
+}
+.lyric-con p{
+    margin: 0;
+}
+.Blog-Item{
+    display: flex;
+    height: 170px;
+    margin:10px;
+    border-bottom: 1px solid #d2d2d2;
+    padding: 20px 0;
+}
+.b_thumbnail{
+    margin-right: 20px;
+    width: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.Main .Album-container{
+    display: inline-block;
+    width: 50%;
+    flex-wrap: wrap;
+}
+
+.Album-thumbnail{
+    width: 250px;
+    height:250px;
+}
+
+.youtube_Btn,.heart-icon{
+float: right;
+}
+.SongInfo h4{
+    padding: 10px;
+    margin: 30px 0 0;
+}
+
+.repl-container{
+    width: 100%;
+}
+.repl-container form{
+    height: 70px;
+    display: flex;
+    padding: 0 10px;
+}
+.repl-container form button{
+    height: 100%;
+    width: 100px;
+    box-shadow: 0 0 2px 0 #808080;
+}
+.repl-container form button:hover{
+    box-shadow: 0 0 3px 0 rgb(32, 32, 32);
+}
+.repl-container form textarea{
+    width: calc(100% - 100px);
+    resize: none;
+    border: none;
+    box-shadow: 0 0 2px 0 #808080;
+}
+.repl-Item{
+    margin: 10px 0;
+    border-bottom: 1px solid #d2d2d2;
+    position: relative;
+}
+.repl-info {
+    display: flex;
+    align-items: center;
+}
+.repl-info img{
+    width: 30px;
+    margin-right: 10px;
+}
+.repl-list{
+    margin-top:30px;
+    padding: 0 10px;
+}
+.repl-content{
+    margin: 10px 0;
+    padding: 0 3px;
+    font-size: 0.9rem;
+}
+.r-n{
+    font-size: 0.9rem;
+    margin-right: 10px;
+}
+.r-d{
+    font-size: 0.8rem;
+    color: #808080;
+}
+.repl-list h5{
+    border-bottom: 1px solid #d2d2d2;
+    padding-bottom: 10px;
+    margin: 0;
+}
+.r_delete_btn{
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+}
+
+.b_user{
+    display: block;
+    color: #FFA01E;
+    margin-top: 5px;
+    font-weight: bold;
+}
+.b_content{
+    text-overflow: ellipsis;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+}
+
+.cart-button{
+    background: none;
+}

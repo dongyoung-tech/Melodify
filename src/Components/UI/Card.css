@@ -1,0 +1,183 @@
+
+.card-container{
+    width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+.card-text{
+    font-size: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding:10px 3px;
+    position: absolute;
+    bottom: 0;
+    height: 60px;
+    padding: 10px;
+    width: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8));
+    color: white;
+}
+.card-box:hover .card-text{
+    height: 100%;
+    text-align: center;
+}
+.card-text strong{
+    font-weight: 100;
+    font-size: 0.9rem;
+}
+.card-text p{
+    width: 100%;
+    margin: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.card-box{
+    width: calc(920px / 4);
+    height:220px;
+    position: relative;
+    margin: 10px;
+    box-shadow: 0 0 7px 2px #d2d2d2;
+}
+.card-box .image-box{
+    width: 100%;
+    height: 100%;
+    background-color: white;
+}
+.image-box img{
+    width:100%;
+    height: 100%;
+    object-fit: cover;
+}
+.SongInfo-container{
+    position: fixed;
+    width: 100vw;
+    background-color: rgba(29, 29, 29, 0.8);
+    top:0;
+    left:0;
+    height: 100vh;
+    overflow-y: scroll;
+}
+.SongInfo{
+    width: 1000px;
+    margin: 70px auto;
+    padding: 50px 20px;
+    position: relative;
+    background-color: white;
+    box-shadow: 0 0 7px 2px #d2d2d2;
+}
+.SongInfo h5{
+    font-size: 1rem;
+}
+
+.detail-Info img{
+    width: 250px;
+    object-fit: cover;
+    background-color: white;
+}
+
+.youtube-container{
+    width: 100%;
+    margin: 50px auto;
+}
+
+.song-title{
+    margin:0 0 5px;
+    font-size: 1.3rem;
+}
+.song-artist{
+    margin:5px 0;
+    font-size: 1.2rem;
+}
+.youtube-container iframe{
+    width: calc(940px / 2);
+    height: 250px;
+    padding: 10px;
+}
+
+.SongInfo-container button{
+    position: fixed;
+    top: 10px;
+    right: 50%;
+    z-index: 2;
+    margin-right: -480px;
+    width: 50px;
+    height: 30px;
+}
+.Track-list ul{
+    border-top: 1px solid #808080;
+    border-bottom: none;
+    padding: 0;
+    margin: 0 auto;
+    text-align: left;
+}
+.Track-list li{
+    border-bottom: 1px solid #808080;
+    padding: 20px 10px 10px;
+    line-height: 30px;
+    margin: 0;
+}
+
+
+.detail-Info{
+    width: 100%;
+    height: 250px;
+    display: flex;
+    border: 1px solid #d2d2d2;
+    overflow: hidden;
+    color: white;
+    background-size: cover;
+    background-position-y: center;
+    background-position-x: center;
+    box-shadow: 0 0 7px 2px #d2d2d2;
+}
+
+.detail-text{
+    width: calc(100% - 250px);
+    padding:0 10px 0 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background:linear-gradient(rgba(0, 0, 0, 0.627), rgba(0, 0, 0, 0.6));
+}
+.detail-text dl{
+    margin: 7px 0;
+}
+
+.Track-list li span , .Track-list li button{
+    display: block;
+    text-align: center;
+    max-width: 150px;
+    margin-right: 20px;
+    float: right;
+    min-width: 33px;
+    height: 30px;
+}
+.t-title{
+    display: inline-block;
+    width: 500px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    padding-right: 10px;
+}
+.t-r-a{
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    text-align: left;
+    width: 200px;
+}
+.t-d-info{
+    float: right;
+    text-align: center;
+    width: 380px;
+}
+.t-num{
+    float: left;
+    width: 33px;
+    margin-right: 10px;
+}

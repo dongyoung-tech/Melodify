@@ -1,0 +1,33 @@
+.login-page{
+    width: 100%;
+    min-height: 100vh;
+    background-image:linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)) , url("../../asset/music.jpg");
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding-bottom: 70px;
+}
+.login-form{
+    width: 500px;
+    text-align: center;
+}
+.login-form input{
+    width: 100%;
+    margin: 5px 0;
+    height: 50px;
+    border-radius: 5px;
+    background-color: white;
+    padding: 10px;
+}
+.login-form button , .login-page button{
+    width: 200px;
+    height: 50px;
+    background-color:#FFA01E;
+    margin: 10px auto;
+    border-radius: 5px;
+    color: white;
+    display: block;
+}
