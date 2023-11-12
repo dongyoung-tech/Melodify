@@ -37,7 +37,7 @@ else{
     <Header/>
     <div className='keyword-container'>
       <h2>{keyword} 검색결과</h2>
-      <KeywordInput/>
+          <KeywordInput cat={cat} keyword={keyword}/>
           <CardPagination item={Data} cat={cat} key={'card-page'}/>
           {Data.length ==0 && <h4>검색 결과가 없습니다. 다른 키워드를 입력해주세요</h4>}
     </div>

@@ -1,7 +1,6 @@
 .login-page{
     width: 100%;
     min-height: 100vh;
-    background-image:linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)) , url("../../asset/music.jpg");
     background-position: center;
     background-size: cover;
     display: flex;
@@ -20,13 +19,14 @@
     height: 50px;
     border-radius: 5px;
     background-color: white;
+    box-shadow: 0 0 5px 2px #d2d2d2;
     padding: 10px;
 }
 .login-form button , .login-page button{
     width: 200px;
     height: 50px;
     background-color:#FFA01E;
-    margin: 10px auto;
+    margin: 5px auto;
     border-radius: 5px;
     color: white;
     display: block;

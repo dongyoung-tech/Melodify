@@ -10,7 +10,6 @@ const Detail =()=>{
             <Routes>
                 <Route path="/release/*" element={<AlbumDetail/>}/>
                 <Route path="/Artist/*" element={<Artist/>}/>
-
             </Routes>
         </div>
 

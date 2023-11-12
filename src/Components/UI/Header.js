@@ -10,8 +10,11 @@ const Header = () =>{
                 <a href="/"><img className ='logo'src={Imgurl}></img></a>
                 <form action={`/Search`} className='header-form'>
                     <input name="Keyword" placeholder="아티스트 및 앨범을 찾아 보세요!"></input>
-                    <i className="fa-solid fa-magnifying-glass"></i>
-                    <input type='hidden' name='cat' value='release'></input>
+                    <select name="cat">
+                        <option value="artist">아티스트</option>
+                        <option value="release">앨범</option>
+                    </select>
+                    <button><i className="fa-solid fa-magnifying-glass"></i></button>
                 </form>
                 <ul>
                     <li><a href="/PlayList">플레이리스트</a></li>

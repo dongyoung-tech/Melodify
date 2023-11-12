@@ -11,7 +11,6 @@ const UserPlaylist = (props) =>{
                 user:props.name
             })
             if (response.data.message == "success") {
-              console.log("내가만든 플리",response.data.rows);
               setData(response.data.rows);
             } 
             else{
@@ -74,7 +73,6 @@ const UserPlaylist = (props) =>{
         )
     }
     else{
-        console.log(Data);
         return(
             <>
              <div className="Cart-Container">

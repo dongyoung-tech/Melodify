@@ -2,7 +2,9 @@
     width: 1000px;
     margin: 120px auto;
 }
-
+.keyword-container h4{
+    padding: 0 10px;
+}
 .keyword-container h2 , .keyword-container form{
     width: 980px;
     margin: 20px auto;

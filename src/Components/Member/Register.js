@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import axios from "axios";
 import Imgurl from "../../asset/letter-logo.png";
 const Register = () => {
+  const [memberValid, setValid] = useState(true);
   const [formData, setFormData] = useState({
     id: "",
     pass: "",
@@ -24,11 +25,48 @@ const Register = () => {
         [name]: value,
       });
     }
+    LoginCheck();
   };
+  const LoginCheck = () =>{
+    const regex = /^(?=.*[a-zA-Z])(?=.*[\W_])[\da-zA-Z\W_]*$/;
+    const idPattern =  /^(?=.*[a-zA-Z])[a-zA-Z\d]+$/;
+    const useridText = document.querySelector('.userid').value;
+    const userpassText = document.querySelector('.userpass').value;
+    if(idPattern.test(useridText))  {
+      if(useridText.length >0){
+        document.querySelector(".IdText").innerHTML = "";
+        setValid(true);
+      }
+    }
+    else {
+        if(useridText.length >0){
+          document.querySelector(".IdText").innerHTML =
+          "아이디는 영어 와 숫자만 사용 하셔야 합니다.";
+          setValid(false);
+        }
+        else document.querySelector(".IdText").innerHTML = "";
+        
+    }
+    // 입력한 패스워드가 정규식과 일치하는지 확인
+    if (regex.test(userpassText)) {
+        document.querySelector(".passText").innerHTML = "";
+        setValid(true);
+    } else {
+      if(userpassText.length >0){
+        document.querySelector(".passText").innerHTML =
+          "패스워드는 영어와 특수문자와 를 포함해야합니다.";
+          setValid(false);
+      }
+      else document.querySelector(".passText").innerHTML = "";;
+    }
 
+  }
   const submitHandler = async (event) => {
     event.preventDefault();
-
+    if(!memberValid){
+      alert('아이디 형식을 충족 시켜주세요');
+      return;
+    }
     const formDataToSend = new FormData();
     formDataToSend.append('id', formData.id);
     formDataToSend.append('pass', formData.pass);
@@ -55,9 +93,11 @@ const Register = () => {
   return (
     <div className="login-page">
       <a href='/'><img src={Imgurl}/></a>
-      <form  class = 'login-form'onSubmit={submitHandler} encType='multipart/form-data'>
-        <input name="id" placeholder="아이디" onChange={handleInputChange} value={formData.id}></input>
-        <input name="pass" type='password' placeholder="패스워드" onChange={handleInputChange} value={formData.pass}></input>
+      <form  className = 'login-form'onSubmit={submitHandler} encType='multipart/form-data'>
+        <input name="id" placeholder="아이디" onChange={handleInputChange} value={formData.id} className="userid"></input>
+        <span className="IdText"></span>
+        <input name="pass" type='password' placeholder="패스워드" onChange={handleInputChange} value={formData.pass} className="userpass"></input>
+        <span className="passText"></span>
         <input name='name' placeholder="닉네임" onChange={handleInputChange} value={formData.name}></input>
         <input type='file' name='profile' onChange={handleInputChange}></input>
         <button type="submit">가입</button>

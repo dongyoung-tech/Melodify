@@ -52,7 +52,7 @@ header{
   z-index: 1;
 }
 .header-form{
-  width: 300px;
+  width: 350px;
   height: 35px;
   border-radius: 30px;
   overflow: hidden;
@@ -61,12 +61,27 @@ header{
   align-items: center;
 }
 .header-form input {
-  width: calc(100% - 30px);
+  width: 100%;
   padding: 5px 10px;
 }
 .header-form i{
-  width: 30px;
+  width: 50px;
   color: #FFA01E;
+}
+header select{
+  border: none;
+  color: #FFA01E;
+  width: 120px;
+  background-image: url("./asset/select.png");
+  background-position-x: right;
+  background-position-y: center;
+  padding-right: 30px;
+    text-align: center;
+}
+header button{
+  background: none;
+  width: 30px;
+  text-align: left;
 }
 .logo{
   width: 200px;
@@ -91,7 +106,7 @@ header ul li{
   height: 100%;
   display: inline-block;
   margin: 0 10px;
-  width: 95px;
+  width: 100px;
   text-align: center;
   font-weight: bold;
 }

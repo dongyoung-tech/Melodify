@@ -12,7 +12,6 @@ const AlbumDetail = (props)=>{
     const albumId = searchParams.get('key');
     const [Data , setData] = useState(null);
     const getData = ()=>{
-        console.log('asd',props.item)
         fetch(`https://port-0-melodifyserver-1drvf2llollu2op.sel5.cloudtype.app/album/key?key=${`${albumId}`}`)
         .then((response) => response.json())
         .then((data) => {

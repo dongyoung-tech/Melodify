@@ -1,13 +1,13 @@
 import React,{useEffect,useState} from "react";
 import axios from "axios";
 import PlayListCon from "./PlayList-Con";
+import Loading from "../UI/Loading";
 const PlaylistList = () =>{
     const [Data ,setData] = useState(null);
     const getData = async() =>{
         try {
             const response = await axios.post("https://port-0-melodifyserver-1drvf2llollu2op.sel5.cloudtype.app/play-list/playList-List")
-            if (response.data.message == "success") {
-              console.log(response.data);
+            if (response.data.message == "success"){
               setData(response.data.rows)
             } 
           } catch (error) {
@@ -20,7 +20,7 @@ const PlaylistList = () =>{
     },[])
 
     if(Data == null){
-        return (<div>Loading...</div>)
+        return <Loading/>
     }
     else{
         return(

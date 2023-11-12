@@ -1,13 +1,12 @@
-import React  , {useState} from "react";
+import React  , {useState,useEffect} from "react";
 import CartItem from "./CartItem";
 import axios from "axios";
 const CartList = (props) =>{
-    const [Data , setData] = useState([]);
-    const user = JSON.parse(sessionStorage.getItem("userData"));
     const [pageNo,setPage] = useState(1);
+    const [totalpage,setTotal] = useState(1);
     const updateData = async (title) =>{
         const updatedItems = props.item.filter(item => item.title !== title);
-        const url = "http://localhost:3001/cart/cart-update";
+        const url = "https://port-0-melodifyserver-1drvf2llollu2op.sel5.cloudtype.app/cart/cart-update";
         try {
           const response = await axios.post(url, {
             userid: props.id,
@@ -24,11 +23,24 @@ const CartList = (props) =>{
           console.error("Failed:", error);
         }
       }
+      useEffect(() => {
+        let selectedPageNo = Math.ceil(props.item.length / 4);
+        setTotal(selectedPageNo);
+      }, [props.item]);
+      
+
+      useEffect(() => {
+        setPage(() => {
+          if (totalpage < pageNo) {
+            return totalpage;
+          }
+          return 1;
+        });
+      }, [totalpage]);
+      
+
       const getPageButtons = () =>{
         const buttons = [];
-        const totalpage = Math.ceil(props.item.length / 4);
-        let pageCount = 5;
-        if (totalpage < 5) pageCount = totalpage;
         const renderButton = (page) =>{
             return <button
                 onClick={()=>setPage(page)}
@@ -62,9 +74,6 @@ const CartList = (props) =>{
     const getCurrentPageData = () => {
         const startIndex = (pageNo - 1) * 4;
         const endIndex = (props.item.length==4)?4:startIndex + 4;
-        if(props.item.length==4 && pageNo >1){
-            setPage(1);
-        }
         return props.item.slice(startIndex, endIndex);
       };
     return(

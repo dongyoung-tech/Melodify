@@ -38,7 +38,7 @@ const PlayListInput = (props) =>{
         return
       }
       try {
-        const response = await axios.post("http://localhost:3001/play-list/playList-Check", {
+        const response = await axios.post("https://port-0-melodifyserver-1drvf2llollu2op.sel5.cloudtype.app/play-list/playList-Check", {
           user: user.name,
           intro:formData.intro,
           info: props.item,
