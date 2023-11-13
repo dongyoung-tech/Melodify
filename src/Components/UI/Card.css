@@ -154,6 +154,7 @@
     float: right;
     min-width: 33px;
     height: 30px;
+    font-size: 1rem;
 }
 .t-title{
     display: inline-block;

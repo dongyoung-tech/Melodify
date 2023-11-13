@@ -74,11 +74,12 @@
 }
 .Blog-Item{
     display: flex;
-    height: 170px;
+    height: 165px;
     margin:10px;
     border-bottom: 1px solid #d2d2d2;
     padding: 20px 0;
 }
+
 .b_thumbnail{
     margin-right: 20px;
     width: 150px;
@@ -174,12 +175,20 @@ float: right;
     margin-top: 5px;
     font-weight: bold;
 }
+.b_title{
+    width: 95%;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
 .b_content{
     text-overflow: ellipsis;
     overflow: hidden;
     display: -webkit-box;
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 3;
+}
+.b_content p{
+    margin: 0;
 }
 
 .cart-button{

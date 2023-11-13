@@ -26,8 +26,10 @@
     background-image: url('../../asset/select2.png');
     background-position-x: right;
     background-position-y:center ;
-    padding-right: 10px;
+    padding: 10px;
     color: white;
+    -webkit-border-radius:0;
+    background-color: orange;
 }
 .keyword-container form button{
     background-color: #FFA01E;

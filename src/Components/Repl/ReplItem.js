@@ -21,6 +21,7 @@ const ReplItem = (props)=>{
             );
 
             if (response.data.message !== "Failed") {
+                alert("댓글을 삭제하였습니다.");
                 props.replLoad();
             }
         } catch (error) {

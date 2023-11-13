@@ -63,8 +63,20 @@ const Register = () => {
   }
   const submitHandler = async (event) => {
     event.preventDefault();
-    if(!memberValid){
+  if(!memberValid){
       alert('아이디 형식을 충족 시켜주세요');
+      return;
+    }
+    if(formData.id.length==0){
+      alert("아이디를 작성해주세요");
+      return;
+    }
+    if(formData.pass.length==0){
+      alert("패스워드를 작성해주세요");
+      return;
+    }
+    if(formData.name.length==0){
+      alert("닉네임을 작성해주세요");
       return;
     }
     const formDataToSend = new FormData();

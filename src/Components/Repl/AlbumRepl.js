@@ -42,9 +42,7 @@ const AlbumRepl = () =>{
               }
             );
             if(response.data.message == "Comment inserted successfully"){
-                console.log(response);
                 setIsUpdated(!isUpdated);
-                console.log("isupdated",isUpdated);
             }
           } catch (error) {
             console.error("Insert Failed:", error);

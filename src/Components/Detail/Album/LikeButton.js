@@ -29,7 +29,6 @@ const LikeButton = (props) =>{
       else url = "https://port-0-melodifyserver-1drvf2llollu2op.sel5.cloudtype.app/cart/cart-update";
   
       try {
-        console.log(url);
         const response = await axios.post(url, {
           userid: user.id,
           info: info

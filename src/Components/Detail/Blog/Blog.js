@@ -7,7 +7,6 @@ const Blog = (props)=>{
         fetch(`https://port-0-melodifyserver-1drvf2llollu2op.sel5.cloudtype.app/blog/key?key=${props.item}`)
         .then((response) => response.json())
         .then((data) => {
-            console.log('블로그 결과',data.documents);
             setData(data.documents);
         })
         .catch((error) => {

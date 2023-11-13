@@ -4,8 +4,7 @@ import ReplItem from "./ReplItem";
 
 const ReplList = (props) => {
     const [data, setData] = useState(null);
-    const [isupdated , setIsUpdated] = useState(false);
-    const fetchData = async() => {
+    const fetchData = async () => {
         try {
             const response = await axios.post(
                 "https://port-0-melodifyserver-1drvf2llollu2op.sel5.cloudtype.app/repl/repl-list",
@@ -19,10 +18,8 @@ const ReplList = (props) => {
                     },
                 }
             );
-
             if (response.data.message !== "Failed") {
                 setData(response.data.rows);
-                setIsUpdated(!isupdated);
             }
         } catch (error) {
             console.error("Fetch failed:", error);
@@ -32,21 +29,19 @@ const ReplList = (props) => {
     useEffect(() => {
         fetchData();
     }, [props.isUpdated]);
-    
-    if (data != null) {
+
+    if (data != null && data.length>0) {
         return (
             <>
-            <h5>총 {data.length}개</h5>
-            {data.map((item, idx) => {
-                return <ReplItem item={item} key={idx} replLoad={fetchData}/>
-            })}
+                <h5>총 {data.length}개</h5>
+                {data.map((item, idx) => (
+                    <ReplItem item={item} key={idx} replLoad={fetchData} />
+                ))}
             </>
-            )
+        );
     } else {
-        return <p>댓글을 작성 해보세요!</p>
+        return <p>댓글을 작성 해보세요!</p>;
     }
 };
 
 export default ReplList;
-
-

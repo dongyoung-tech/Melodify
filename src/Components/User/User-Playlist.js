@@ -79,7 +79,7 @@ const UserPlaylist = (props) =>{
                 {Data.length != 0 && getCurrentPageData().map((item,idx)=>{
                     return <UserPlayListItem item={item} key={idx}/>
                 })}
-               {Data.length ==0 && <h3>찜한 노래가 없습니다.</h3>}
+               {Data.length ==0 && <h3>제작한 플레이리스트 가 없습니다.</h3>}
             </div>
             <div className="pagination">{getPageButtons()}</div>
             </>

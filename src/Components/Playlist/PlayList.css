@@ -283,6 +283,12 @@
 .p-d-r{
     color: #808080;
 }
+.p-d-t , .p-d-r{
+    width: 95%;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
 .p-detail-intro{
     background: white;
     height: 90px;
@@ -373,3 +379,4 @@
     margin-left: 10px;
     box-shadow: 0 0 7px 2px #808080;
 }
+

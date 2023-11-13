@@ -18,7 +18,6 @@ const TrackList = (props) =>{
          );
          if (response.data.message != "no data") {
            const parsedData = response.data;
-           console.log("asas",JSON.parse(parsedData.rows[0].info));
            setData(JSON.parse(parsedData.rows[0].info));
            Dispatch(addItem(JSON.parse(parsedData.rows[0].info))); 
          }
