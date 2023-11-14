@@ -3,12 +3,14 @@
 }
 button{
   background-color: #f2f2f2;
+  cursor : pointer 
 }
 *{box-sizing: border-box; appearance: none;outline: none; font-family: 'Noto Sans KR', sans-serif;list-style: none;text-decoration: none;}
 .App-logo {
   height: 40vmin;
   pointer-events: none;
 }
+select{text-align-last: center;}
 a{
   color:black;
 }
