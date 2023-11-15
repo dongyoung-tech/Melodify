@@ -52,14 +52,16 @@ const getCurrentPageData = () => {
   };
     return(
        <div className="play-list-container">
-            <h2>플레이리스트 목록</h2>
+                <div className="play-list-con-intro">
+                <h2>플레이리스트 목록</h2>{user && 
+                <Link className="make-btn" to={`/PlayList/MakePlayList`}><i className="fa-regular fa-square-plus"></i></Link>} 
+                </div>
             <ul className="play-list-box">
                 {getCurrentPageData().map((item,idx) => {
                     return <PlayListItem item={item} key={idx}/>
                 })}
 
             </ul>
-            {user && <Link className="make-btn" to={`/PlayList/MakePlayList`}>만들기</Link>}
             <div className="pagination">{getPageButtons()}</div>
        </div>
     )

@@ -13,7 +13,11 @@ const MakePlayList = () =>{
     const user = JSON.parse(sessionStorage.getItem("userData"));
     const Dispatch = useDispatch();
     const cartList = async () => {
-        if(!user) return;
+        if(!user) {
+          alert("로그인후 이용해주세요!");
+          window.location.href='/PlayList';
+          return;
+        }
         try {
           const response = await axios.post(
             "https://port-0-melodifyserver-1drvf2llollu2op.sel5.cloudtype.app/cart/cart-list",

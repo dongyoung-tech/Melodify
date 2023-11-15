@@ -41,11 +41,18 @@
     position: absolute;
     width: 100%;
     bottom:0;
-    height: 50px;
+    height: 60px;
     padding: 5px;
     font-size: 0.8rem;
     background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
     color: white;
+}
+.M-Song-Text b{
+    display: inline-block;
+    width: 95%;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
 }
 .Make-Playlist-Input{
     width: 300px;
@@ -315,9 +322,23 @@
     width: 1000px;
     margin: 150px auto;
 }
-.play-list-container h2{
-    
+.play-list-con-intro h2{
+    margin: 0;
+    float: left;
+    font-size: 1.5rem;
 }
+.play-list-con-intro{
+    height: 50px;
+    line-height: 50px;
+}
+.make-btn{
+    padding: 5px;
+    font-size: 2rem;
+    font-weight: 100;
+    transition: 0.5s;
+    float: right;
+}
+
 .play-list-box{
     padding: 0;
     width: 100%;

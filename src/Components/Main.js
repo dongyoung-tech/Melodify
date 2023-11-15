@@ -38,7 +38,7 @@ return(
     <Header></Header>
         <div className='Main'>
                 <TopAlbum cat={"kpop"}/>
-                <TopAlbum cat={"ballad"}/>
+                <TopAlbum cat={"R&B"}/>
                 <div className='banner-image'>자신만의 플레이리스트를 만들어보세요!</div>
                 <TopArtist cat={"kpop"}/>
         </div>
