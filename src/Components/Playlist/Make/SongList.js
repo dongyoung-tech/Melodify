@@ -1,6 +1,4 @@
 import React ,{useState}from "react";
-import SongItem from "./SongItem";
-import SelectedItem from "./SelectedItem";
 import MakeCartList from "./MakeCartList";
 import MakeSongList from "./MakeSongList";
 
