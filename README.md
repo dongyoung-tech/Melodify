@@ -5,7 +5,6 @@
 
 ### url : https://m-elodify.netlify.app/
 
-https://github.com/dongyoung-tech/Melodify
 
 테스트 계정  ID : root , PW : rootpassword (이 계정으로 로그인 하셔서 테스트 하시면 됩니다)
 
